@@ -6,8 +6,9 @@ Requiere Linux con Xorg(X11), no es compatible con Wayland
 
 ## Paquetes de Linux
 
-1. `ffmpeg` para grabar
-2. `libvpx` para el codec libre VP9
+1. `ffmpeg` - CLI de grabación
+2. `libvpx` - Libreria del codec libre VP9 de video
+3. `pipewire`+o  `pulseaudio` - Servidores de Audio
 
 ## Video - Pantalla de grabación
 1. Utiliza la pantalla predeterminada `:0` (Se puede cambiar)
@@ -48,9 +49,10 @@ ldconfig -p | grep libnous
 ``` 
 
 ## Audio - Compatibilidad
-2. Es compatible con Pulseaudio y Pipewire.
-3. Utiliza Pipewire en modo compatibilidad.
-4. Podes verificar si PulseAudio o PipeWire esta presente con: 
+1. Es compatible con Pulseaudio y Pipewire.
+2. Utiliza Pipewire en modo compatibilidad.
+3. Podes verificar si PulseAudio o PipeWire esta presente con: 
 ```
 pactl info | "server name"
 ```
+4. Si no estan presente instala uno de los paquetes `pulseaudio`o `pipewire`
