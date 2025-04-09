@@ -1,8 +1,9 @@
-#Requiere los siguientes paquetes:
-#1      -   ffmpeg para grabar
-#2      -   libvpx para el codec libre VP9
-
+from datetime import datetime
 import subprocess
 
-global nombre duracion
+global archivo_grabacion, duracion_grabacion
+
+#   Definimos el archivo de salida en formato YY-MM-DD-HH-MM.webm
+fecha_y_hora = datetime.now()
+archivo_grabacion = fecha_y_hora.strftime("%d-%m-%Y-%Hhs%Mm") + ".webm"
 
